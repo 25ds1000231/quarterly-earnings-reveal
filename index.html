@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Q4 Quarterly Earnings – Interactive Report</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Reveal.js core CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/reveal.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/dist/theme/black.css" id="theme">
+
+  <!-- Code highlighting theme -->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js/plugin/highlight/monokai.css">
+
+  <style>
+    /* Small custom tweaks */
+    .subtitle {
+      font-size: 0.8em;
+      color: #ccc;
+    }
+
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .kpi-card {
+      border-radius: 12px;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .kpi-label {
+      font-size: 0.9em;
+      opacity: 0.8;
+    }
+
+    .kpi-value {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- TITLE SLIDE -->
+      <section>
+        <h2>Q4 Quarterly Earnings Report</h2>
+        <p class="subtitle">Interactive Stakeholder Presentation (Reveal.js)</p>
+        <p>
+          Presented by:<br>
+          <strong>Bipul Lahiri</strong><br>
+          <small>Email: <a href="mailto:25ds1000231@ds.study.iitm.ac.in">25ds1000231@ds.study.iitm.ac.in</a></small>
+        </p>
+        <aside class="notes">
+          Welcome everyone to the Q4 quarterly earnings presentation. This deck is built with Reveal.js to demonstrate
+          a modern, web-native presentation format. I’ll walk through performance, key metrics, and forward-looking
+          guidance.
+        </aside>
+      </section>
+
+      <!-- MARKDOWN SLIDE (REQUIRED) -->
+      <section data-markdown>
+        <textarea data-template>
+### Agenda
+
+1. **Business Highlights**
+2. **Financial Performance**
+3. **Key KPIs & Ratios**
+4. **Cash Flow & Capital Allocation**
+5. **Guidance & Risks**
+6. **Q&A**
+
+_Use arrow keys or spacebar to navigate._
+        </textarea>
+        <aside class="notes">
+          Explain the flow of the session. Emphasise that we’ll first align on business highlights and then go deeper
+          into numbers and KPIs before discussing guidance.
+        </aside>
+      </section>
+
+      <!-- KPI SLIDE WITH FRAGMENTS -->
+      <section>
+        <h3>Business Highlights (Q4)</h3>
+        <div class="kpi-grid">
+          <div class="kpi-card fragment">
+            <div class="kpi-label">Revenue Growth (YoY)</div>
+            <div class="kpi-value">+14.8%</div>
+            <p>Driven by strong demand in digital and cloud services.</p>
+          </div>
+          <div class="kpi-card fragment">
+            <div class="kpi-label">Operating Margin</div>
+            <div class="kpi-value">21.3%</div>
+            <p>Disciplined cost management and productivity initiatives.</p>
+          </div>
+          <div class="kpi-card fragment">
+            <div class="kpi-label">Net Profit</div>
+            <div class="kpi-value">₹ 842 Cr</div>
+            <p>Healthy profitability despite macro headwinds.</p>
+          </div>
+        </div>
+        <aside class="notes">
+          Reveal each KPI one by one to keep the audience focused. Start with revenue growth, then margin, and finally
+          net profit, tying them back to strategic initiatives.
+        </aside>
+      </section>
+
+      <!-- CODE SAMPLE WITH SYNTAX HIGHLIGHTING -->
+      <section>
+        <h3>Interactive Reporting – Sample Code</h3>
+        <pre><code class="language-javascript" data-line-numbers>
+// Example: Compute YoY growth and margin
+function computeMetrics(current, previous) {
+  const revenueGrowth = ((current.revenue - previous.revenue) / previous.revenue) * 100;
+  const netMargin = (current.netIncome / current.revenue) * 100;
+
+  return {
+    revenueGrowth: revenueGrowth.toFixed(2) + '%',
+    netMargin: netMargin.toFixed(2) + '%'
+  };
+}
+
+const q4FY25 = { revenue: 5600, netIncome: 842 };
+const q4FY24 = { revenue: 4875, netIncome: 730 };
+
+console.log(computeMetrics(q4FY25, q4FY24));
+        </code></pre>
+        <aside class="notes">
+          Use this slide to highlight that our reporting stack is API-driven and programmable. The example shows how we
+          compute YoY growth and net margin programmatically for consistency across dashboards.
+        </aside>
+      </section>
+
+      <!-- MATH / FINANCIAL FORMULAS -->
+      <section>
+        <h3>Key Financial Ratios (Math Support)</h3>
+
+        <p class="fragment">
+          **Net Profit Margin**:
+          \[
+            \text{Net Profit Margin} =
+            \frac{\text{Net Income}}{\text{Revenue}} \times 100\%
+          \]
+        </p>
+
+        <p class="fragment">
+          **Return on Equity (ROE)**:
+          \[
+            \text{ROE} =
+            \frac{\text{Net Income}}{\text{Average Shareholders' Equity}} \times 100\%
+          \]
+        </p>
+
+        <p class="fragment">
+          **Earnings per Share (EPS)**:
+          \[
+            \text{EPS} =
+            \frac{\text{Net Income} - \text{Preferred Dividends}}{\text{Weighted Avg. Shares Outstanding}}
+          \]
+        </p>
+
+        <aside class="notes">
+          Walk through each formula and relate it to Q4 numbers. Emphasise how these ratios help stakeholders evaluate
+          profitability, efficiency, and shareholder value creation.
+        </aside>
+      </section>
+
+      <!-- CASH FLOW / GUIDANCE SLIDE WITH FRAGMENTS -->
+      <section>
+        <h3>Cash Flow & Guidance</h3>
+        <ul>
+          <li class="fragment">Operating Cash Flow: <strong>₹ 1,250 Cr</strong></li>
+          <li class="fragment">Capex: <strong>₹ 310 Cr</strong> (Data centers & product R&amp;D)</li>
+          <li class="fragment">Free Cash Flow (FCF): <strong>₹ 940 Cr</strong></li>
+          <li class="fragment">FY26 Revenue Growth Guidance: <strong>12–14%</strong></li>
+          <li class="fragment">FY26 Operating Margin Guidance: <strong>20–22%</strong></li>
+        </ul>
+        <aside class="notes">
+          Highlight strong cash generation and disciplined capital allocation. Then move into guidance, clarifying the
+          underlying assumptions and risk factors.
+        </aside>
+      </section>
+
+      <!-- CLOSING / Q&A -->
+      <section>
+        <h3>Thank You</h3>
+        <p>Questions &amp; Discussion</p>
+        <p class="fragment">
+          Contact: <a href="mailto:25ds1000231@ds.study.iitm.ac.in">25ds1000231@ds.study.iitm.ac.in</a>
+        </p>
+        <aside class="notes">
+          Invite questions and feedback. Remind stakeholders that the deck is hosted on GitHub Pages and can be accessed
+          from any modern browser.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js core JS -->
+  <script src="https://unpkg.com/reveal.js/dist/reveal.js"></script>
+
+  <!-- Plugins -->
+  <script src="https://unpkg.com/reveal.js/plugin/markdown/markdown.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/highlight/highlight.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js/plugin/math/math.js"></script>
+
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      plugins: [
+        RevealMarkdown,
+        RevealHighlight,
+        RevealNotes,
+        RevealMath.KaTeX
+      ],
+      math: {
+        // Default KaTeX config
+        katexScript: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js',
+        katexStylesheet: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css'
+      }
+    });
+  </script>
+</body>
+
+</html>
